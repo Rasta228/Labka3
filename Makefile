@@ -1,2 +1,2 @@
 all:
-	gcc chessviz.c -Wall -o chessviz
+	gcc chessviz.c -Wall -o chessviz.exe
