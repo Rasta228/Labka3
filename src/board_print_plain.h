@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 
-void printDeck(char**);
+void printDeck(char[8][8]);
 
 #endif

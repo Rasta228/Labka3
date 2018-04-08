@@ -1,3 +1,5 @@
+#include "board_start.h"
+
 void initDeck(char deck[8][8]) {
     char letters[]={'r','n', 'b', 'q', 'k', 'b', 'n', 'r'};
     for (int letter = 0; letter < 8; ++letter) {
