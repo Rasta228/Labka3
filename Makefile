@@ -1,3 +1,5 @@
+.PHONY: all clean
+
 all: build/main.o build/board_print_plain.o build/board_start.o
 	gcc build/main.o build/board_print_plain.o build/board_start.o -o bin/chess.exe -Wall -Werror
 
@@ -10,4 +12,6 @@ build/board_print_plain.o: src/board_print_plain.c
 build/board_start.o: src/board_start.c
 	gcc -c src/board_start.c -o build/board_start.o
 
-
+clean:
+	rm build/*.o
+	rm bin/*.exe
