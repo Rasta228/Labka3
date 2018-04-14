@@ -1,8 +1,11 @@
 #include "board_start.h"
 #include "board_print_plain.h"
+#include "board.h"
 int main() {
     char deck[8][8];
     initDeck(deck);
-    printDeck(deck);
-    return 0;
+    while(1) {
+        printDeck(deck);
+        makeMove(deck);
+    }
 }
