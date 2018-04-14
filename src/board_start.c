@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "board_start.h"
 
 void initDeck(char deck[8][8]) {
     char letters[]={'r','n', 'b', 'q', 'k', 'b', 'n', 'r'};
@@ -11,21 +11,4 @@ void initDeck(char deck[8][8]) {
             deck[i][letter] = ' ';
         }
     }
-}
-
-void printDeck(char deck[8][8]) {
-    for (int number = 0; number < 8; ++number) {
-        for (int letter = 0; letter < 8; ++letter) {
-
-            printf("%c ",deck[number][letter]);
-        }
-        printf("\n");
-    }
-}
-
-int main() {
-    char deck[8][8];
-    initDeck(deck);
-    printDeck(deck);
-
 }
