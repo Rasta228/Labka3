@@ -1,4 +1,5 @@
 #include "board_print_plain.h"
+#include <stdio.h>
 
 void printDeck(char deck[8][8]) {
     for (int number = 0; number < 8; ++number) {
