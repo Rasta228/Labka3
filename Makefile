@@ -1,12 +1,12 @@
-FLAGS = -Wall -Werror -std=c99
-OBJ = gcc -c $< -o $@ $(FLAGS)
+CFLAGS = -Wall -Werror -std=c99
+OBJ = gcc -c $< -o $@ $(CFLAGS)
 
 .PHONY: all clean
 
 all: bin/chess.exe
 
 bin/chess.exe: build/main.o build/board_print_plain.o build/board_start.o build/board.o build/board_read.o
-	gcc $^ -o $@ $(FLAGS)
+	gcc $^ -o $@ $(CFLAGS)
 
 build/main.o: src/main.c
 	$(OBJ)
@@ -24,5 +24,5 @@ build/board_read.o: src/board_read.c src/board_read.h
 	$(OBJ)
 
 clean:
-	rm build/*.o
-	rm bin/*.exe
+	rm -f build/*.o
+	rm -f  bin/*.exe
