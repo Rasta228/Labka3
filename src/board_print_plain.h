@@ -1,6 +1,6 @@
-#ifndef BOARD_PRINTPLAIN_H
-#define BOARD_PRINTPLAIN_H
+#ifndef BOARD_PRINT_PLAIN_H
+#define BOARD_PRINT_PLAIN_H
 
-void printDeck(char[8][8]);
+void board_print_plain(char[8][8]);
 
 #endif
