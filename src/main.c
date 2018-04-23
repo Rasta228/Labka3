@@ -3,9 +3,9 @@
 #include "board.h"
 int main() {
     char deck[8][8];
-    initDeck(deck);
+    board_start(deck);
     while(1) {
-        printDeck(deck);
-        makeMove(deck);
+        board_print_plain(deck);
+        board(deck);
     }
 }
