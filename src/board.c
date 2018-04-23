@@ -7,7 +7,8 @@ void board(char deck[8][8]) {
     int flag = 1;
     do{
         char *input = board_read();
-        int move[] = {input[0]-'a', 8-(input[1]-'0'), input[3]-'a', 8-(input[4]-'0')};
+        int move[4];
+        reformat_input(input, move);
         free(input);
         flag = check_move(deck, move);
     } while (flag);
@@ -24,7 +25,12 @@ int check_move(char deck[8][8], int move[]) {
         
     }
 }
-
+void reformat_input(char *input, int move[4]) {
+    move[0] = input[0]-'a';
+    move[1] = 8-(input[1]-'0');
+    move[2] = input[3]-'a';
+    move[3] = 8-(input[4]-'0');
+}
 int black_pwn(char deck[8][8], int move[]) {
     if ((move[2] == move[0] && deck[move[3]][move[2]] == ' ' &&
         (move[3] == move[1]+1 || (move[1] == 1 && move[3] == 3))) || (move[3] == move[1]+1 &&
