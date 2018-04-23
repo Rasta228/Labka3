@@ -36,7 +36,7 @@ CTEST(Black_pwn, Incorrect) {
     int move[4];
     reformat_input(input, move);
     int result = black_pwn(deck, move);
-    int expected = 0;
+    int expected = 1;
     ASSERT_EQUAL(expected, result);
 }
 
