@@ -40,6 +40,28 @@ CTEST(Black_pawn, Incorrect) {
     ASSERT_EQUAL(expected, result);
 }
 
+CTEST(White_pawn, Correct) {
+    char deck[8][8];
+    board_start(deck);
+    char input[] = "b2-b3";
+    int move[4];
+    reformat_input(input, move);
+    int result = white_pawn(deck, move);
+    int expected = 0;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(White_pawn, Incorrect) {
+    char deck[8][8];
+    board_start(deck);
+    char input[] = "c2-b6";
+    int move[4];
+    reformat_input(input, move);
+    int result = white_pawn(deck, move);
+    int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
+
 CTEST(Check_move, Correct) {
     char deck[8][8];
     board_start(deck);
