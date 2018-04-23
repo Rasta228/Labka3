@@ -4,9 +4,14 @@
 
 char *board_read() {
     char *str = calloc(7, sizeof(char));
+    int flag;
     do {
-    scanf("%6s", str);
-    } while (check_input(str));
+        scanf("%6s", str);
+        flag = (check_input(str));
+        if (flag) {
+            printf("Incorrect input, try again\n");
+        }
+    } while (flag);
     return str;
 }
 
